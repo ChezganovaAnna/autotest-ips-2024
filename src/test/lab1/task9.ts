@@ -1,10 +1,11 @@
 console.log('Задание 9:')
 
-function getFilteredArray(digits: number[], meaning: string): void {
+// даёт != печатать
+function printFilteredArray(digits: number[], meaning: string): void {
     console.log(meaning, ': ', digits)
 }
 
-function getDigits(n: number): void {
+function getFilteredDigits(n: number): void {
     let odds: number[] = []
     let evens: number[] = []
     for (let i: number = 0; i <= n; i++) {
@@ -14,8 +15,8 @@ function getDigits(n: number): void {
             odds.push(i)
         }
     }
-    getFilteredArray(evens, 'Чётные')
-    getFilteredArray(odds, 'Нечётные')
+    printFilteredArray(odds, 'Чётные')
+    printFilteredArray(evens, 'Нечётные')
 }
 
-getDigits(100)
+getFilteredDigits(100)

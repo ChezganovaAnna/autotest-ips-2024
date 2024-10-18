@@ -1,13 +1,8 @@
-function countdown() {
-    let seconds: number = 0;
+let sec: number = 0
 
-    function tick() {
-        seconds++
-        console.log(seconds)
-        setTimeout(tick, 1000)
-    }
-    
-    tick()
-}
-
-countdown()
+function tick(): void {
+    console.log(sec)
+    sec++
+    setTimeout(() => tick(), 1000)
+}  
+tick()
